@@ -3,10 +3,17 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 router.get('/', (req, res) => {
-  // find all categories
-  Category.findAll(
-    // be syre ti include associated products - do I do this here?
-  )
+  Category.findAll({
+    // be sure it includes associated products
+    attributes: ['id', 'category_name'],
+    order: [['id', 'ASC']],
+    include: [
+      {
+        model: Product,
+        attributes: ['product_name']
+      }
+    ]
+  })
     .then(dbCategoryData => res.json(dbCategoryData))
     .catch(err => {
       console.log(err);
@@ -71,22 +78,22 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
-    Category.destroy({
-        where: {
-            id: req.params.id
-        }
+  Category.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbCategoryData => {
+      if (!dbCategoryData) {
+        res.status(404).json({ message: 'No category found with this id' });
+        return;
+      }
+      res.json(dbCategoryData);
     })
-        .then(dbCategoryData => {
-            if (!dbCategoryData) {
-                res.status(404).json({ message: 'No category found with this id' });
-                return;
-            }
-            res.json(dbCategoryData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

@@ -7,7 +7,25 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
-    Product.findAll()
+    Product.findAll({
+        attributes: ['id', 'product_name', 'price', 'stock'],
+        order: [['id', 'ASC']],
+        include: [
+          {
+            model: Category,
+            attributes: ['category_name']
+          },
+          // {
+          //   model: ProductTag,
+          //   attributes: [tag_id]
+          // },
+          // {
+          //   model: Tag,
+          //   attributes: [tag_name]
+          // }
+        ],
+        // exclude: [tag_id]
+      })
         .then(product=> res.json(product))
         .catch(err => {
             console.log(err);
@@ -55,7 +73,7 @@ router.post('/', (req, res) => {
   })
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
-      if (req.body.tagIds.length) {
+      if (req.body.tagIds) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
             product_id: product.id,
