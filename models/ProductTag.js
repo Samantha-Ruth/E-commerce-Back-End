@@ -14,6 +14,7 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       // *** DOUBLE CHECK!!!  references the product model's ID
       references: {
         model: 'product',
@@ -22,6 +23,7 @@ ProductTag.init(
     },
     tag_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       // *** DOUBLE CHECK!!! references the tag model's ID
       references: {
         model: 'tag',
