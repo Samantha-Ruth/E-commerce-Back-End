@@ -15,20 +15,18 @@ router.get('/', (req, res) => {
             model: Category,
             attributes: ['category_name']
           },
-          // {
-          //   model: Tag,
-          //   attributes: ['tag_name'],
-          //   through: ProductTag, 
-          // }
-          // {
-          //   model: ProductTag,
-          //   attributes: ['tag_id'],
-          // },
-          // {
-          //   model: Tag,
-          //   attributes: ['tag_name'],
-          // }
-        ],
+          {
+            model: Tag,
+            attributes: ['tag_name'],
+            through: ProductTag, 
+          }],
+        // exclude: [
+        //   {
+        //     model: Tag,
+        //     attributes: ['product_tag'],
+        //     through: ProductTag,
+        //   }
+        // ]
       })
         .then(product=> res.json(product))
         .catch(err => {
@@ -51,11 +49,11 @@ router.get('/:id', (req, res) => {
             model: Category,
             attributes: ['category_name']
           },
-          // {
-          //   model: Tag,
-          //   attributes: ['tag_name'],
-          //   through: ProductTag, 
-          // }
+          {
+            model: Tag,
+            attributes: ['tag_name'],
+            through: ProductTag, 
+          }
         ]
     })
         .then(product => {
