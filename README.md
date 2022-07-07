@@ -60,7 +60,8 @@ Image of working "GET single product":
 
 Image of working "POST tag":
 
-[Example of Post single tag.pdf](https://github.com/Samantha-Ruth/E-commerce-Back-End/files/9064846/Example.of.Post.single.tag.pdf)
+![Example of Post single tag](https://user-images.githubusercontent.com/64170123/177803619-1df97823-d0e9-4066-8ae7-492f54c3ae93.jpg)
+
 
 
 ## Links
