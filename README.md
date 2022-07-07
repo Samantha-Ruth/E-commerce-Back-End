@@ -2,7 +2,7 @@
 
 ## Description
 
-This project uses a combination of express.js, SQL, MySQL, MySQL2, and Sequelize to create the back end of a simple ecommerce site.
+This project uses a combination of express.js, SQL, mysql2, and Sequelize to create the back end of a simple ecommerce site.
 
 This project introduced me to Sequelize.  I learned about creating databases using constructor Models, seeding them from the command line, and accessing the data stored within the models through API routes. I also learned about a JOIN table and how to create JOINS using the Sequelize language "includes".   
 
