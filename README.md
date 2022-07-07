@@ -7,9 +7,11 @@ This project uses a combination of express.js, SQL, MySQL, MySQL2, and Sequelize
 This project introduced me to Sequelize.  I learned about creating databases using constructor Models, seeding them from the command line, and accessing the data stored within the models through API routes. I also learned about a JOIN table and how to create JOINS using the Sequelize language "includes".   
 
 Screen Shot of Model:
+![Example of Model](https://user-images.githubusercontent.com/64170123/177802948-6f2e7e47-6988-420e-a27e-203edfa01a8c.jpg)
 
 
 Screen Shot of associations:
+![Example of associations](https://user-images.githubusercontent.com/64170123/177802990-cb88fabb-b1ea-4f42-a69c-381ad454a102.jpg)
 
 ## Table of Contents
 
@@ -50,15 +52,15 @@ The user can also edit a single category, product, or tag using the PUT route an
 
 Image of working "GET category":
 
-![Get all notes](https://user-images.githubusercontent.com/64170123/177059374-a4fa3be0-d35a-4274-af81-90baf0d9a4ed.jpg)
+![Example of GET categories](https://user-images.githubusercontent.com/64170123/177803052-492ed420-fff5-4c39-9b6c-e1a8ccd364b1.jpg)
 
 Image of working "GET single product":
 
-![Get Single Note](https://user-images.githubusercontent.com/64170123/177059375-b0a24fc9-a323-49be-8cd4-956052a87d51.jpg)
+![Exampe of GET single product](https://user-images.githubusercontent.com/64170123/177803084-f26e870e-f1d5-4403-9b57-410d6da76365.jpg)
 
 Image of working "POST tag":
 
-![Post New Note](https://user-images.githubusercontent.com/64170123/177059376-3bdcb661-165a-45bc-a599-fd71c22bcb0f.jpg)
+[Example of Post single tag.pdf](https://github.com/Samantha-Ruth/E-commerce-Back-End/files/9064846/Example.of.Post.single.tag.pdf)
 
 
 ## Links
