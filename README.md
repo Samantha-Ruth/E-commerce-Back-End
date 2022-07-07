@@ -6,6 +6,11 @@ This project uses a combination of express.js, SQL, MySQL, MySQL2, and Sequelize
 
 This project introduced me to Sequelize.  I learned about creating databases using constructor Models, seeding them from the command line, and accessing the data stored within the models through API routes. I also learned about a JOIN table and how to create JOINS using the Sequelize language "includes".   
 
+Screen Shot of Model:
+
+
+Screen Shot of associations:
+
 ## Table of Contents
 
 * [Installation](#installation)
@@ -18,7 +23,9 @@ This project introduced me to Sequelize.  I learned about creating databases usi
 If the user already has node installed on their device, they can download this project and run "npm init" and then "npm i express sequelize mysql2 dotenv" to download the required dependencies (express.js, Sequelize, MySql2, and .env respectively).  In order to access the mysql2 shell,  they would need to create a .env file with the following, replacing <username> and <user password> with the users own username and password: 
   
 DB_NAME=ecommerce_db
+
 DB_USER= < username >
+
 DB_PASSWORD= < user password >
 
 
@@ -32,7 +39,6 @@ Finally, connect the server by entering "npm start" into the command line.
 
 The user should use either Insomnia or PostMan to create a front-end environment.  When the user creates GET routes with the endroute of api/categories, the user will be presented with the table of ecommerce categories.  When the user send the same GET using an id number after categories (eg api/categories/2), the user is presented with a single category with an ID of 2.  The user can access all the products and tags using the same manner (api/products) and (api/tags), respectfully, and a single product and single tag by id (api/products/3), (api/tags5). 
 
-![Title Page](https://user-images.githubusercontent.com/64170123/177059433-513ab019-e128-4060-b3d2-b1e4e1c5e77c.jpg)
 
 The user can also add categories, products, and tags using the POST route and entering required data. 
 
