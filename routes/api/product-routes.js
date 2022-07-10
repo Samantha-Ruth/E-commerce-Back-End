@@ -20,13 +20,6 @@ router.get('/', (req, res) => {
             attributes: ['tag_name'],
             through: ProductTag, 
           }],
-        // exclude: [
-        //   {
-        //     model: Tag,
-        //     attributes: ['product_tag'],
-        //     through: ProductTag,
-        //   }
-        // ]
       })
         .then(product=> res.json(product))
         .catch(err => {
