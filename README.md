@@ -37,6 +37,7 @@ Next, seed the database with data by entering "npm run seed" into the command li
 
 Finally, connect the server by entering "npm start" into the command line.
 
+
 ## Usage
 
 The user should use either Insomnia or PostMan to create a front-end environment.  When the user creates GET routes with the endroute of api/categories, the user will be presented with the table of ecommerce categories.  When the user send the same GET using an id number after categories (eg api/categories/2), the user is presented with a single category with an ID of 2.  The user can access all the products and tags using the same manner (api/products) and (api/tags), respectfully, and a single product and single tag by id (api/products/3), (api/tags5). 
@@ -67,7 +68,7 @@ Image of working "POST tag":
 ## Links
 
 
-Link to video of project: https://drive.google.com/file/d/15nT1Moq29GKDaQtC4oDqshv1Xy3nGnYu/view
+Link to video of project: https://drive.google.com/file/d/1N7gWdj6sqXPNKDBdSY9WZnOaF43ygZ40/view
 
 The link to the project is here: [(heroku)](https://floating-waters-20623.herokuapp.com)
 
