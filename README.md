@@ -70,7 +70,7 @@ Image of working "POST tag":
 
 Link to video of project: https://drive.google.com/file/d/1N7gWdj6sqXPNKDBdSY9WZnOaF43ygZ40/view
 
-The link to the project is here: [(heroku)](https://floating-waters-20623.herokuapp.com)
+The link to the project is here: https://floating-waters-20623.herokuapp.com
 
 The url of the Git repository is here: https://github.com/Samantha-Ruth/E-commerce-Back-End
 
